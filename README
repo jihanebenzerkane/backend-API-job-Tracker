@@ -1,96 +1,27 @@
 # Job Application Tracker API
 
-A backend API built with **FastAPI** and **SQLite** to manage users and job/internship applications.
-
----
+A REST API built with **FastAPI** and **SQLite** to manage users and job/internship applications.
 
 ## Tech Stack
+Python · FastAPI · SQLAlchemy · SQLite · Uvicorn
 
-| Tool | Purpose |
-|------|---------|
-| Python | Programming language |
-| FastAPI | Web framework |
-| SQLAlchemy | ORM / database interaction |
-| SQLite | Database (`app.db`) |
-| Uvicorn | ASGI server |
-
----
-
-## How to Run
+## Run Locally
 
 ```bash
-# 1. Clone the repository
 git clone <your-repo-url>
 cd "Backend API"
-
-# 2. Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate
-
-# 3. Install dependencies
+python -m venv venv && venv\Scripts\activate
 pip install fastapi uvicorn sqlalchemy pydantic
-
-# 4. Start the server
 uvicorn app.main:app --reload
 ```
 
-Open your browser at **http://127.0.0.1:8000/docs** to explore all endpoints interactively.
-
----
+Visit **http://127.0.0.1:8000/docs** for interactive API docs.
 
 ## Endpoints
 
-### Users
-
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/users` | Create a new user |
-| `GET` | `/users` | Get all users |
-| `GET` | `/users/{user_id}` | Get a user by ID |
-
-### Applications
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/applications/` | Submit a new application |
-| `GET` | `/applications/` | Get all applications *(requires `X-Role: recruiter` header)* |
-| `GET` | `/applications/{app_id}` | Get a single application |
-
----
-
-## Example Requests
-
-**Create a user**
-```json
-POST /users
-{
-  "name": "Jihane",
-  "email": "jihane@example.com"
-}
-```
-
-**Submit an application**
-```json
-POST /applications/
-{
-  "user_id": 1,
-  "company": "Google",
-  "position": "Backend Intern"
-}
-```
-
----
-
-## Project Structure
-
-```
-Backend API/
-├── app/
-│   ├── main.py       ← FastAPI app & routes
-│   ├── models.py     ← SQLAlchemy models
-│   ├── schemas.py    ← Pydantic schemas
-│   ├── crud.py       ← Database operations
-│   └── database.py  ← DB connection
-├── app.db            ← SQLite database (auto-created)
-└── README.md
-```
+| `POST` | `/users` | Create a user |
+| `GET` | `/users` | List all users |
+| `POST` | `/applications/` | Submit an application |
+| `GET` | `/applications/` | List all applications |
