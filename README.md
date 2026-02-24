@@ -2,7 +2,7 @@
 
 A clean REST API to keep track of where you've applied. I built this to manage the chaos of job/internship hunting without using a messy spreadsheet.
 
-## 📁 Project Structure
+## Project Structure
 
 It’s pretty modular so it’s easy to find things:
 - `app/main.py`: The entry point for FastAPI.
@@ -48,13 +48,13 @@ It’s pretty modular so it’s easy to find things:
 | `PATCH`  | `/applications/{id}` | Update status (needs token) |
 | `DELETE` | `/applications/{id}` | Remove an entry (needs token) |
 
-## 🎓 Student Notes
+## Notes
 
 - **Why SQLite?** It's just a file (`app.db`). No need to install a heavy database server like PostgreSQL while just testing or building.
 - **Why JWT?** It’s stateless. Instead of the server remembering who you are via sessions, the server gives you a signed "token" that you send back with every request.
 - **FastAPI?** Because the auto-generated documentation (`/docs`) is a lifesaver.
 
-## 🚀 Quick Test (cURL)
+## Quick Test (cURL)
 
 If you have a token, you can add an application like this:
 ```bash
