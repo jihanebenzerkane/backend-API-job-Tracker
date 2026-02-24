@@ -12,7 +12,7 @@ It’s pretty modular so it’s easy to find things:
 - `app/crud.py`: Logic for Create, Read, Update, Delete.
 - `requirements.txt`: The libraries you need.
 
-## 🛠️ Setup
+## Setup
 
 1. **Virtual Env**:
    ```bash
@@ -31,7 +31,7 @@ It’s pretty modular so it’s easy to find things:
    ```
    Check it out at `http://127.0.0.1:8000/docs`.
 
-## 🛰️ API Endpoints
+## API Endpoints
 
 ### Auth & Users
 | Method | Route | What it does |
@@ -56,10 +56,12 @@ It’s pretty modular so it’s easy to find things:
 
 ## Quick Test (cURL)
 
-If you have a token, you can add an application like this:
 ```bash
 curl -X POST "http://127.0.0.1:8000/applications/" \
      -H "Authorization: Bearer YOUR_TOKEN_HERE" \
      -H "Content-Type: application/json" \
      -d '{"company": "Google", "position": "Intern", "user_id": 1}'
 ```
+<img width="1686" height="553" alt="image" src="https://github.com/user-attachments/assets/257d4545-ae14-4db4-8ff9-926e74ab819e" />
+
+
