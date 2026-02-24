@@ -1,0 +1,27 @@
+# Job Application Tracker API
+
+A REST API built with **FastAPI** and **SQLite** to manage users and job/internship applications.
+
+## Tech Stack
+Python · FastAPI · SQLAlchemy · SQLite · Uvicorn
+
+## Run Locally
+
+```bash
+git clone <your-repo-url>
+cd "Backend API"
+python -m venv venv && venv\Scripts\activate
+pip install fastapi uvicorn sqlalchemy pydantic
+uvicorn app.main:app --reload
+```
+
+Visit **http://127.0.0.1:8000/docs** for interactive API docs.
+
+## Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/users` | Create a user |
+| `GET` | `/users` | List all users |
+| `POST` | `/applications/` | Submit an application |
+| `GET` | `/applications/` | List all applications |
